@@ -1,13 +1,15 @@
 # Strategic AI Readiness Simulator
 ### محاكي الجاهزية الاستراتيجية للذكاء الاصطناعي
 
-> A strategic decision-support simulator that helps Saudi organizations choose an AI adoption path — balancing cost, execution speed, and digital sovereignty — and produces a board-ready decision memorandum.
+> A strategic decision-support simulator that helps Saudi organizations choose an AI adoption path — balancing cost, execution speed, and digital sovereignty — then tells them which AI technique to use, what it requires, and produces a board-ready decision memorandum and deck.
 
-> أداة محاكاة استراتيجية تساعد المؤسسات السعودية على اختيار مسار تبنّي الذكاء الاصطناعي، بموازنة التكلفة وسرعة التنفيذ والسيادة الرقمية، وتُخرج مذكرة قرار جاهزة لمجلس الإدارة.
+> أداة محاكاة استراتيجية تساعد المؤسسات السعودية على اختيار مسار تبنّي الذكاء الاصطناعي بموازنة التكلفة وسرعة التنفيذ والسيادة الرقمية، ثم تحدّد الأسلوب التقني المناسب ومتطلباته، وتُخرج مذكرة قرار وعرضاً تقديمياً جاهزين لمجلس الإدارة.
 
 **ABDULLAH ALADHYANI**
 
 ---
+
+![Overview](docs/01-overview.jpg)
 
 ## The problem | المشكلة
 
@@ -19,35 +21,61 @@ Answering it properly normally requires a consulting engagement measured in mont
 
 ## What it does | ما تفعله
 
-Four inputs — **sector, organization size, data sensitivity, technology budget** — produce a complete strategic comparison of three adoption paths:
+Four inputs — **sector, organization size, data sensitivity, technology budget** — produce a complete strategic comparison of three adoption paths, scored on cost, timeline, sovereignty risk, execution speed, scalability, and talent readiness.
 
-| Path | Indicative cost | Timeline | Sovereignty risk | Execution speed |
-|---|---|---|---|---|
-| Full Foreign Adoption | ✔ | ✔ | ✔ | ✔ |
-| Full Sovereign Build | ✔ | ✔ | ✔ | ✔ |
-| Hybrid Model | ✔ | ✔ | ✔ | ✔ |
+## The decision is not one path | القرار ليس مساراً واحداً
 
-## Capabilities | المزايا
+The simulator's central argument: an organization does not pick one path. The right answer differs by **what the AI actually touches** — and each workload implies a different technique with different requirements.
+
+![Workloads and AI approach](docs/02-workloads-and-approach.jpg)
+
+| Workload | Effective sensitivity | Technique | Path |
+|---|---|---|---|
+| Developer coding assistant | low | Prompt engineering | Foreign |
+| Customer-service chatbot | moderate | Retrieval-Augmented Generation | Hybrid |
+| Document processing | high | Intelligent document processing | Sovereign |
+| Operational analytics | high | **Classical ML — not an LLM** | Sovereign |
+| Core sensitive data | highest | Locally fine-tuned open-weight model | Sovereign |
+
+For the recommended technique it then states exactly what the organization needs across **data, infrastructure, team, and governance**, plus the suggested model class, lead time, and how that technique interacts with data residency.
+
+## Risk and compliance | المخاطر والامتثال
+
+![Risk map and compliance matrix](docs/03-risk-and-compliance.jpg)
+
+The headline sovereignty score is decomposed into five sub-dimensions — vendor lock-in, data exposure, geopolitical exposure, talent scarcity, and operational continuity — because "risk" is never one number. Each path is then scored against the controls that actually apply to the selected sector, including a sector-specific control (SAMA for financial, CST for telecom, HCIS for energy, cloud policy for government). Selecting Top Secret data automatically tightens the assessment.
+
+## Board deliverables | مخرجات مجلس الإدارة
+
+![Board deck](docs/04-board-deck.png)
+
+- **PDF decision memorandum** — executive page, comparison table, compliance matrix, AI approach with its requirements, roadmap, final recommendation, and a sign-off block.
+- **PowerPoint deck** — eight slides in the same structure, because consultants present in PowerPoint rather than PDF.
+
+Both export in **Arabic or English**, in **Saudi Riyal or US Dollar**, with correct Arabic typography and right-to-left layout throughout.
+
+## Full capability list | قائمة المزايا
 
 **Analysis**
-- **Dual engine** — a deterministic offline engine (instant, repeatable, requires no network) plus an optional live engine that interprets a free-text scenario. The live engine falls back to the offline model transparently on any failure, and the interface always states which engine produced the result.
-- **Automatic recommendation** with a written board-level justification and a stated confidence level. Decision weights shift with the inputs: higher data sensitivity and stricter regulation raise the weight of sovereignty; a smaller budget raises the weight of cost.
-- **Decision-weight transparency** — the weighting the engine applied is shown to the user, not hidden behind a score.
+- **Dual engine** — a deterministic offline engine (instant, repeatable, no network) plus an optional live engine that interprets a free-text scenario. The live engine falls back to the offline model transparently on any failure, and the interface always states which engine produced the result.
+- **Automatic recommendation** with a written board-level justification and a stated confidence level.
+- **Decision-weight transparency** — the weighting applied is shown to the user, not hidden behind a score. Weights shift with the inputs: higher sensitivity and stricter regulation raise the sovereignty weight; a smaller budget raises the cost weight.
+- **Methodology panel** — every formula behind the numbers is explained in the interface, alongside links to the primary regulatory sources.
 
 **Financial modelling**
 - **Five-year cumulative cost curve** with automatic break-even detection, exposing the real financial commitment beyond year one.
 - **Cost breakdown** — CAPEX/OPEX split and spend distribution across infrastructure, licenses, talent, and integration.
+- **Dual currency** — Saudi Riyal or US Dollar across the interface and every export.
 
-**Risk & compliance**
-- **Detailed risk map** — the headline sovereignty score decomposed into vendor lock-in, data exposure, geopolitical exposure, talent scarcity, and operational continuity.
-- **Regulatory compliance matrix** — each path scored against the controls that actually apply to the selected sector, including a sector-specific control (SAMA for financial, CST for telecom, HCIS for energy, cloud policy for government), with a compliance percentage per path. Selecting Top Secret data automatically tightens the assessment.
+**Risk, compliance and execution**
+- Detailed five-dimension risk map.
+- Regulatory compliance matrix with a per-path compliance percentage.
+- Per-workload technique recommendation with data, infrastructure, team and governance requirements.
+- Four-phase implementation roadmap specific to the recommended path.
 
-**Delivery**
-- **Radar comparison** across five dimensions: cost efficiency, speed, sovereignty, scalability, and talent readiness.
-- **Implementation roadmap** — four phases with indicative time windows, specific to the recommended path.
-- **Save & compare** — keep several analyses side by side to compare scenarios.
-- **PDF board memorandum** — executive page, comparison table, compliance matrix, roadmap, final recommendation, and a sign-off block, in Arabic or English with correct Arabic typography.
-- **Full Arabic/English interface** with correct RTL layout and a dark executive theme.
+**Experience**
+- Full Arabic/English interface with correct RTL layout, a dark executive theme, and a responsive phone layout.
+- Save and compare several analyses side by side.
 
 ## Technical overview | نظرة تقنية
 
@@ -55,16 +83,24 @@ Four inputs — **sector, organization size, data sensitivity, technology budget
 |---|---|
 | Backend | Python · Flask |
 | Analysis engine | Parametric deterministic model with an optional LLM-assisted layer |
-| Frontend | React · Chart.js · bilingual RTL interface |
-| Reporting | ReportLab with Arabic shaping and bidirectional text layout |
+| Frontend | React · Chart.js · bilingual RTL interface, no build step |
+| Reporting | ReportLab (PDF) · python-pptx (PowerPoint), with bundled Arabic typography |
 
-The application runs entirely offline by default: front-end dependencies are vendored locally and the default engine requires no network access and no API key.
+The application runs entirely offline by default: front-end dependencies are vendored locally, fonts are bundled rather than taken from the host OS, and the default engine requires no network access and no API key.
+
+### Engineering notes | ملاحظات هندسية
+
+The hardest part of this project was not the model — it was **Arabic typography in generated documents**:
+
+- ReportLab has no bidirectional text engine, so reordering a whole paragraph before line-breaking produced pages whose lines read bottom-to-top. The fix wraps text to measured width first, then reorders each line independently.
+- The bidi algorithm infers paragraph direction from the first strong character, so any line beginning with a Latin acronym such as `(NCA)` was laid out left-to-right and rendered mirrored. Direction is now forced explicitly.
+- PowerPoint applies its own bidi engine, which drops the space between a digit and an Arabic word at a direction boundary and mirrors brackets around Arabic phrases. Both are handled by a sanitizer in the export layer.
 
 ## Methodology notes | ملاحظات منهجية
 
 - Data sensitivity levels mirror the NDMO national data classification scheme (Public / Internal / Confidential / Top Secret).
 - Regulatory weighting per sector reflects the intensity of that sector's supervisory regime.
-- Cost figures are **indicative planning ranges in USD** produced by a parametric model. They are not quotations and do not replace a detailed feasibility study.
+- Cost figures are **indicative planning ranges** produced by a parametric model. They are not quotations and do not replace a detailed feasibility study.
 - The compliance matrix expresses a typical posture per path. An actual compliance determination requires review by the relevant regulator and the organization's own compliance function.
 
 ## Disclaimer | إخلاء مسؤولية
