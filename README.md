@@ -1,5 +1,5 @@
-# Strategic AI Readiness Simulator
-### محاكي الجاهزية الاستراتيجية للذكاء الاصطناعي
+# Bawsala · بوصلة
+### Strategic AI Readiness Simulator — محاكي الجاهزية الاستراتيجية للذكاء الاصطناعي
 
 > A strategic decision-support simulator that helps Saudi organizations choose an AI adoption path — balancing cost, execution speed, and digital sovereignty — then tells them which AI technique to use, what it requires, and produces a board-ready decision memorandum and deck.
 
@@ -37,7 +37,9 @@ The simulator's central argument: an organization does not pick one path. The ri
 | Operational analytics | high | **Classical ML — not an LLM** | Sovereign |
 | Core sensitive data | highest | Locally fine-tuned open-weight model | Sovereign |
 
-For the recommended technique it then states exactly what the organization needs across **data, infrastructure, team, and governance**, plus the suggested model class, lead time, and how that technique interacts with data residency.
+Nothing here is a fixed lookup. The technique is **scored per workload** against the organization's own constraints — budget capacity, team depth, sector tilt and the residency requirement — so a small entity on a tight budget is steered away from techniques it cannot staff, while a well-funded enterprise is pushed deeper.
+
+**Select any workload row** and it expands in place to show that workload's technique, its lead time and complexity, what it requires across **data, infrastructure, team and governance**, and a shortlist of **named models available on the market**. Where the workload's data may not leave the Kingdom, hosted services are filtered out of that shortlist automatically and the exclusion is stated — so the same table recommends Claude or GPT for a coding assistant and ALLaM, Qwen or Llama for core classified data.
 
 ## Risk and compliance | المخاطر والامتثال
 
@@ -70,7 +72,8 @@ Both export in **Arabic or English**, in **Saudi Riyal or US Dollar**, with corr
 **Risk, compliance and execution**
 - Detailed five-dimension risk map.
 - Regulatory compliance matrix with a per-path compliance percentage.
-- Per-workload technique recommendation with data, infrastructure, team and governance requirements.
+- Per-workload technique recommendation, scored against the organization's constraints, with requirements and a named-model shortlist filtered by data residency.
+- Expandable workload rows — each reveals its own technique, requirements and model options in place.
 - Four-phase implementation roadmap specific to the recommended path.
 
 **Experience**
