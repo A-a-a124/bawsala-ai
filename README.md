@@ -21,7 +21,7 @@ Answering it properly normally requires a consulting engagement measured in mont
 
 ## What it does | ما تفعله
 
-Four inputs — **sector, organization size, data sensitivity, technology budget** — produce a complete strategic comparison of three adoption paths, scored on cost, timeline, sovereignty risk, execution speed, scalability, and talent readiness.
+Five inputs — **sector, organization size, data sensitivity, technology budget, and the primary AI use case** — produce a complete strategic comparison of three adoption paths, scored on cost, timeline, sovereignty risk, execution speed, scalability, and talent readiness.
 
 ## The decision is not one path | القرار ليس مساراً واحداً
 
@@ -29,15 +29,15 @@ The simulator's central argument: an organization does not pick one path. The ri
 
 ![Workloads and AI approach](docs/02-workloads-and-approach.jpg)
 
-| Workload | Effective sensitivity | Technique | Path |
-|---|---|---|---|
-| Developer coding assistant | low | Prompt engineering | Foreign |
-| Customer-service chatbot | moderate | Retrieval-Augmented Generation | Hybrid |
-| Document processing | high | Intelligent document processing | Sovereign |
-| Operational analytics | high | **Classical ML — not an LLM** | Sovereign |
-| Core sensitive data | highest | Locally fine-tuned open-weight model | Sovereign |
+Five workloads are assessed — a developer coding assistant, a customer-service chatbot, document processing, operational analytics, and models on core sensitive data — each with its own effective sensitivity, technique and path.
 
-Nothing here is a fixed lookup. The technique is **scored per workload** against the organization's own constraints — budget capacity, team depth, sector tilt and the residency requirement — so a small entity on a tight budget is steered away from techniques it cannot staff, while a well-funded enterprise is pushed deeper.
+Nothing here is a fixed lookup. The organization states **what it wants from AI first**, and the plan is built around that use case. Each use case has a maturity ladder of techniques; where the organization **starts** on it and how far it should **aim** are decided by its own constraints:
+
+- a budget or team that cannot carry the natural technique starts one rung below it;
+- data that may not leave the Kingdom rules out starting on a hosted service;
+- fine-tuning is only proposed where the data is sensitive enough to justify it.
+
+Every suggested technique carries a one-line **reason** specific to that organization, so the same use case produces a different plan for a small entity on a tight budget than for a well-funded enterprise. Operational analytics, for example, is steered to **classical ML rather than an LLM**.
 
 **Select any workload row** and it expands in place to show that workload's technique, its lead time and complexity, what it requires across **data, infrastructure, team and governance**, and a shortlist of **named models available on the market**. Where the workload's data may not leave the Kingdom, hosted services are filtered out of that shortlist automatically and the exclusion is stated — so the same table recommends Claude or GPT for a coding assistant and ALLaM, Qwen or Llama for core classified data.
 
@@ -72,12 +72,14 @@ Both export in **Arabic or English**, in **Saudi Riyal or US Dollar**, with corr
 **Risk, compliance and execution**
 - Detailed five-dimension risk map.
 - Regulatory compliance matrix with a per-path compliance percentage.
-- Per-workload technique recommendation, scored against the organization's constraints, with requirements and a named-model shortlist filtered by data residency.
+- Per-workload technique recommendation, staged against the organization's constraints and built around its primary use case, with requirements and a named-model shortlist filtered by data residency.
 - Expandable workload rows — each reveals its own technique, requirements and model options in place.
 - Four-phase implementation roadmap specific to the recommended path.
 
 **Experience**
-- Full Arabic/English interface with correct RTL layout, a dark executive theme, and a responsive phone layout.
+- Full Arabic/English interface with correct RTL layout, a matte-black executive theme, and a responsive phone layout.
+- Results appear on load and update instantly as any input changes, with the recommendation presented as a single headline score against the two alternatives.
+- Sticky section navigation across the full analysis.
 - Save and compare several analyses side by side.
 
 ## Technical overview | نظرة تقنية
