@@ -1,9 +1,9 @@
 # Bawsala · بوصلة
-### Strategic AI Readiness Simulator — محاكي الجاهزية الاستراتيجية للذكاء الاصطناعي
+### AI Adoption Decision Platform — منصة دعم القرار لتبنّي الذكاء الاصطناعي
 
-> A strategic decision-support simulator that helps Saudi organizations choose an AI adoption path — balancing cost, execution speed, and digital sovereignty — then tells them which AI technique to use, what it requires, and produces a board-ready decision memorandum and deck.
+> A strategic decision-support platform that helps Saudi organizations choose an AI adoption path — balancing cost, execution speed, and digital sovereignty — then tells them which AI technique to use, what it requires, and produces a board-ready decision memorandum and deck.
 
-> أداة محاكاة استراتيجية تساعد المؤسسات السعودية على اختيار مسار تبنّي الذكاء الاصطناعي بموازنة التكلفة وسرعة التنفيذ والسيادة الرقمية، ثم تحدّد الأسلوب التقني المناسب ومتطلباته، وتُخرج مذكرة قرار وعرضاً تقديمياً جاهزين لمجلس الإدارة.
+> منصة لدعم القرار الاستراتيجي تساعد المؤسسات السعودية على اختيار مسار تبنّي الذكاء الاصطناعي بموازنة التكلفة وسرعة التنفيذ والسيادة الرقمية، ثم تحدّد الأسلوب التقني المناسب ومتطلباته، وتُخرج مذكرة قرار وعرضاً تقديمياً جاهزين لمجلس الإدارة.
 
 **ABDULLAH ALADHYANI**
 
@@ -15,7 +15,7 @@
 
 Every regulated organization in Saudi Arabia faces the same strategic question: adopt global AI services (fast and inexpensive, but data leaves the Kingdom), build sovereign capability in-house (full control, but costly and slow), or run a hybrid model?
 
-Answering it properly normally requires a consulting engagement measured in months. This simulator compresses that analysis into minutes — grounded in the regulatory reality of the Saudi market: NCA ECC, NDMO data classification, PDPL, SAMA, CST, and HCIS.
+Answering it properly normally requires a consulting engagement measured in months. This platform compresses that analysis into minutes — grounded in the regulatory reality of the Saudi market: NCA ECC, NDMO data classification, PDPL, SAMA, CST, and HCIS.
 
 تواجه كل مؤسسة منظَّمة في المملكة السؤال نفسه: هل نعتمد على خدمات ذكاء اصطناعي عالمية جاهزة، أم نبني قدرة سيادية داخلية، أم نمضي بنموذج هجين؟ الإجابة عادةً تستغرق أشهراً من العمل الاستشاري — وهذه الأداة تختصرها إلى دقائق، مبنيةً على الواقع التنظيمي السعودي.
 
@@ -25,7 +25,7 @@ Five inputs — **sector, organization size, data sensitivity, technology budget
 
 ## The decision is not one path | القرار ليس مساراً واحداً
 
-The simulator's central argument: an organization does not pick one path. The right answer differs by **what the AI actually touches** — and each workload implies a different technique with different requirements.
+The platform's central argument: an organization does not pick one path. The right answer differs by **what the AI actually touches** — and each workload implies a different technique with different requirements.
 
 ![Workloads and AI approach](docs/02-workloads-and-approach.jpg)
 
@@ -110,9 +110,9 @@ The hardest part of this project was not the model — it was **Arabic typograph
 
 ## Disclaimer | إخلاء مسؤولية
 
-This is a decision-support simulation tool. All outputs are indicative and intended to structure a strategic discussion — not to serve as financial, legal, or regulatory advice.
+This is a decision-support tool. All outputs are indicative and intended to structure a strategic discussion — not to serve as financial, legal, or regulatory advice.
 
-أداة محاكاة لدعم القرار؛ جميع المخرجات استرشادية وتهدف إلى تنظيم النقاش الاستراتيجي، ولا تُعدّ استشارة مالية أو قانونية أو تنظيمية.
+أداة لدعم القرار؛ جميع المخرجات استرشادية وتهدف إلى تنظيم النقاش الاستراتيجي، ولا تُعدّ استشارة مالية أو قانونية أو تنظيمية.
 
 ## Source code | الكود المصدري
 
